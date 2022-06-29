@@ -1,40 +1,23 @@
-<script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
-
-let clock = ref<string>('00:00:00')
-let clockInterval = ref<ReturnType<typeof setInterval>>()
-
-const showTime = () => {
-  let time = new Date()
-  let [hour, min, sec] = [time.getHours(), time.getMinutes(), time.getSeconds()]
-
-  let currentTime: string =
-    (hour < 10 ? '0' + hour : hour) +
-    ':' +
-    (min < 10 ? '0' + min : min) +
-    ':' +
-    (sec < 10 ? '0' + sec : sec)
-
-  clock.value = currentTime
-}
-
-onMounted(() => {
-  clockInterval.value = setInterval(() => {
-    showTime()
-  }, 1000)
-})
-
-onUnmounted(() => {
-  clearInterval(clockInterval.value)
-})
-</script>
-
 <template>
-  <div class="h-full w-full flex items-center justify-center m-auto">
-    <div class="mt--24">
+  <div class="flex items-center justify-center m-auto">
+    <div font-mono class="mt--20">
       <div text="4xl md:6xl">htDocs</div>
-      <div text="lg md:2xl">{{ clock }}</div>
-      <div text="md" font="italic">from human for people</div>
+      <span class="animated">|</span>
+      <Clock class="text-lg md:text-2xl" />
+      <div text="md" font="italic" m="l--2 md:l--1">"from human for people"</div>
     </div>
   </div>
 </template>
+
+<style>
+.animated {
+  opacity: 1;
+  animation: heartbeat 0.67s infinite;
+}
+
+@keyframes heartbeat {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
