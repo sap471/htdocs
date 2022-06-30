@@ -1,7 +1,3 @@
-<script setup lang="ts"></script>
-
-<route lang="yaml"></route>
-
 <template>
   <div display="flex" flex="col" m="x-auto" w="screen-sm md:screen-md" p="4">
     <div display="flex" align="items-center" justify="between">

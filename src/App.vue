@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useDark } from '@vueuse/core'
-
-const isDark = useDark()
+useHead({
+  title: 'htDocs'
+})
 </script>
 
 <template>

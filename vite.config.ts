@@ -40,14 +40,14 @@ export default defineConfig({
     layouts({}),
 
     autoImport({
-      imports: ['vue', 'vue/macros', 'vue-router', '@vueuse/core'],
-      dts: true,
+      imports: ['vue', 'vue/macros', 'vue-router', '@vueuse/core', '@vueuse/head'],
+      dts: 'src/auto-imports.d.ts',
       dirs: ['./src/composables'],
       vueTemplate: true
     }),
 
     components({
-      dts: true,
+      dts: 'src/components.d.ts',
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/]
     }),
 
