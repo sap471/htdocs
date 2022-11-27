@@ -6,8 +6,8 @@ import {
   presetTypography,
   presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup,
-} from "unocss";
+  transformerVariantGroup
+} from 'unocss'
 
 export default defineConfig({
   shortcuts: [],
@@ -15,15 +15,15 @@ export default defineConfig({
     presetUno(),
     presetAttributify(),
     presetIcons({
-      scale: 1.2,
+      scale: 1.2
     }),
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: "Lato",
-        mono: ["Fira Code", "Fira Mono:400,700"],
-      },
-    }),
+        sans: 'Lato',
+        mono: ['Fira Code', 'Fira Mono:400,700']
+      }
+    })
   ],
-  transformers: [transformerDirectives(), transformerVariantGroup()],
-});
+  transformers: [transformerDirectives(), transformerVariantGroup()]
+})
