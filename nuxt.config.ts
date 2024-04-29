@@ -2,25 +2,20 @@
 export default defineNuxtConfig({
   app: {
     pageTransition: {
-      name: "fade",
-      mode: "out-in",
-    },
+      name: 'fade',
+      mode: 'out-in'
+    }
   },
 
-  modules: ["@unocss/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode"],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxtjs/color-mode'],
 
-  css: ["@unocss/reset/tailwind.css", "uno.css"],
+  css: ['@unocss/reset/tailwind.css', 'uno.css'],
 
   colorMode: {
-    classSuffix: "",
+    classSuffix: ''
   },
 
   nitro: {
-    preset: "vercel-edge",
-  },
-
-  experimental: {
-    reactivityTransform: true,
-    inlineSSRStyles: false,
-  },
-});
+    static: true
+  }
+})

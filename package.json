@@ -8,10 +8,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@iconify-json/ri": "^1.1.4",
-    "@nuxtjs/color-mode": "^3.2.0",
-    "@unocss/nuxt": "^0.46.5",
-    "@vueuse/nuxt": "^9.6.0",
-    "nuxt": "3.0.0"
+    "@iconify-json/ri": "^1.1.20",
+    "@nuxtjs/color-mode": "^3.4.0",
+    "@unocss/nuxt": "^0.59.4",
+    "@vueuse/nuxt": "^10.9.0",
+    "nuxt": "3.11.2"
   }
 }
