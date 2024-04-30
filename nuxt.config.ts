@@ -7,12 +7,12 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxtjs/color-mode'],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@pinia/nuxt'],
 
   css: ['@unocss/reset/tailwind.css', 'uno.css'],
 
-  colorMode: {
-    classSuffix: ''
+  imports: {
+    dirs: ['stores']
   },
 
   nitro: {

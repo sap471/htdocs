@@ -1,7 +1,12 @@
 <script setup lang="ts">
+const global = useGlobalStore()
+
 useHead({
-  titleTemplate: (title) => (title ? title + " - htDocs" : "htDocs"),
-});
+  titleTemplate: (title) => (title ? title + ' - htDocs' : 'htDocs'),
+  htmlAttrs: {
+    class: global.darkMode ? 'dark' : 'light'
+  }
+})
 </script>
 
 <template>
